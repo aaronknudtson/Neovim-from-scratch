@@ -85,8 +85,11 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 
 	-- Treesitter
-	use("nvim-treesitter/nvim-treesitter")
-
+--	use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
+	})
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 
