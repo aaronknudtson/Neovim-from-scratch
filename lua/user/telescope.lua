@@ -4,14 +4,18 @@ if not status_ok then
 end
 
 local actions = require "telescope.actions"
-
 telescope.setup {
   defaults = {
     file_ignore_patterns = {"node_modules"},
-    prompt_prefix = " ",
-    selection_caret = " ",
-    path_display = { "smart" },
+    file_sorter = require("telescope.sorters").get_fzy_sorter,
+    prompt_prefix = " >",
+    color_devicons = true,
 
+    file_previewer = require("telescope.previewers").vim_buffer_cat.new,
+    grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+    qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
+
+    -- path_display = { "smart" },
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,

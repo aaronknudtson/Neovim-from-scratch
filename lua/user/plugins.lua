@@ -46,9 +46,9 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used by lots of plugins
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("numToStr/Comment.nvim")
-	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("JoosepAlviste/nvim-ts-context-commentstring") -- correct comments whether in main ts body of the tsx portion
 	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
+	use("kyazdani42/nvim-tree.lua") -- file explorer
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
@@ -63,6 +63,10 @@ return packer.startup(function(use)
 	use("folke/tokyonight.nvim")
 	use("lunarvim/darkplus.nvim")
   use("danilo-augusto/vim-afterglow")
+  use("catppuccin/nvim")
+
+  -- Transparent background
+  use("xiyaowong/nvim-transparent")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
