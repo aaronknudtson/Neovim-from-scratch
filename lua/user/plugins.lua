@@ -48,7 +48,7 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- correct comments whether in main ts body of the tsx portion
 	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua") -- file explorer
+	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 	use("nvim-lualine/lualine.nvim")
@@ -89,11 +89,13 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 
 	-- Treesitter
---	use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
-	})
+  use({"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"})
+	--[[ use({ ]]
+	--[[ 	"nvim-treesitter/nvim-treesitter", ]]
+	--[[ 	commit = "518e27589c0463af15463c9d675c65e464efc2fe", ]]
+	--[[ }) ]]
+  -- use("nvim-treesitter/nvim-treesitter")
+  use 'nvim-treesitter/nvim-treesitter-context'
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 
