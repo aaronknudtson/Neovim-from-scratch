@@ -30,6 +30,7 @@ vim.cmd [[
   augroup end
 ]]
 
+vim.cmd [[ autocmd BufRead,BufNewFile *.scad set filetype=openscad ]]
 -- Autoformat
 -- augroup _lsp
 --   autocmd!
