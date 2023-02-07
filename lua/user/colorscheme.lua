@@ -11,6 +11,6 @@ vim.cmd([[colorscheme gruvbox]])
 --[[   return ]]
 --[[ end ]]
 
---[[ require("transparent").setup({ ]]
---[[   enable = true, -- boolean: enable transparent ]]
---[[ }) ]]
+require("transparent").setup({
+  enable = true, -- boolean: enable transparent
+})
